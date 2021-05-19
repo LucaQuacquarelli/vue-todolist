@@ -21,11 +21,11 @@ var app = new Vue(
                 this.tasks.splice(indexToRemove, 1)
             },
             completeTask: function(completed, indexToRemove) {
-                this.tasks.splice(indexToRemove, 1)
+                this.removeTask(indexToRemove);
                 return this.completedTasks.push(completed)   
             },
             repeatTask: function(repeated, indexToRemove) {
-                this.completedTasks.splice(indexToRemove, 1)
+                this.completedTasks.splice(indexToRemove, 1);
                 return this.tasks.push(repeated)   
             }
         }
