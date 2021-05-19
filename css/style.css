@@ -100,3 +100,7 @@
 .task-container li > i.fa-check-circle {
     color: green;
 }
+
+.completed-task li {
+    text-decoration: line-through;
+}

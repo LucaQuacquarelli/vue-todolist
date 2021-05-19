@@ -7,7 +7,8 @@ var app = new Vue(
                 "Andare in palestra",
                 "Portare a spasso il cane"
             ],
-            newTask: ""
+            newTask: "",
+            completedTasks: []
         },
         methods: {
             addNewTask: function() {
@@ -18,6 +19,14 @@ var app = new Vue(
             },
             removeTask: function(indexToRemove) {
                 this.tasks.splice(indexToRemove, 1)
+            },
+            completeTask: function(completed, indexToRemove) {
+                this.tasks.splice(indexToRemove, 1)
+                return this.completedTasks.push(completed)   
+            },
+            repeatTask: function(repeated, indexToRemove) {
+                this.completedTasks.splice(indexToRemove, 1)
+                return this.tasks.push(repeated)   
             }
         }
     }
