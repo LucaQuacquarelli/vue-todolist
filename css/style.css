@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #fcd44e;
+}
+.title h1 {
+    padding: 5px 10px;
+    border: 1px solid white;
+    color: white;
+    border-radius: 15px;
+}
+
+.add-task {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    background-color: #298ff1;
+}
+
+.add-task > input {
+    margin: 0 10px;
+    padding: 5px;
+} 
+
+.add-task > button {
+    padding: 5px 20px;
+    background-color: white;
+    color: #e9543e;
+    border: 1px solid #e9543e;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.task-container {
+    display: flex;
+    height: calc(100vh - 150px);
+}
+
+.task-container .task,
+.task-container .completed-task {
+    width: 50%;
+    padding: 20px;
+}
+
+.task-container .task {
+    background-color: black;
+}
+
+.task-container .completed-task {
+    background-color: #71df4c;
+}
+
+.task-container .task-title {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.task-container .checker {
+    display: inline-block;
+    width: 35px;
+    height: 15px;
+    margin: 0 10px;
+    border: 1px solid lightgray;
+}
+
+.task-container li {
+    list-style: none;
+    margin: 10px 0;
+    color: white;
+}
+
+.task-container h3 {
+    color: white;
+}
+
+.task-container li > i {
+    margin: 0 10px;
+    color: blueviolet;
+    border: 2px solid white;
+    border-radius: 50%;
+    font-size: 8px;
+}
+
+.task-container li > i.far {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.task-container li > i.fa-times-circle {
+    color: red;
+}
+
+.task-container li > i.fa-check-circle {
+    color: green;
+}
