@@ -3,19 +3,33 @@ var app = new Vue(
         el: "#root",
         data: {
             tasks: [
-                "Fare la spesa",
-                "Andare in palestra",
-                "Portare a spasso il cane"
+                {
+                    text: "Fare la spesa",
+                    complete: false
+                },
+                {
+                    text: "Andare in palestra",
+                    complete: false
+                },
+                {
+                    text: "Portare a spasso il cane",
+                    complete: false
+                }
             ],
             newTask: "",
             completedTasks: []
         },
         methods: {
             addNewTask: function() {
+                let newObject = {
+                    text: this.newTask,
+                    complete: false
+                };
+
                 if (this.newTask.trim().length > 0) {
-                    this.tasks.push(this.newTask);
-                    this.newTask = ""
-                }
+                    this.tasks.push(newObject);
+                };
+                this.newTask = ""
             },
             removeTask: function(indexToRemove) {
                 this.tasks.splice(indexToRemove, 1)
